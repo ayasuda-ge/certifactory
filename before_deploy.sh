@@ -19,3 +19,4 @@ ca.cer
 MSG
 rm ca.key ca.cer agent_linux_sys
 ls -al ./ && ls -al ./../..
+cd -
