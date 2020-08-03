@@ -36,7 +36,7 @@ deploy:
   on:
     branch: beta
 
-after_deploy: chmod 775 ./after_deploy.sh && ./after_deploy.sh
+after_deploy: pwd && ls -al && chmod 775 ./after_deploy.sh && ./after_deploy.sh
 
 notifications:
   slack:
