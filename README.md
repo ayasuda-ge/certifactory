@@ -17,10 +17,10 @@ switch to the root of your branch then generate your CSR file by following the i
 bash <(curl -s https://enterprise-connect.github.io/oci/k8s/conf.txt) -gen
 ```
 
-### step 3. move the generated .csr file 
+### step 3. move the CSR
 Move the newly generated <csr-id>.csr file to the path ```csr-list/```
 
-### step 4. check-in the file
+### step 4. check-in the CSR
 add/commit/push the file to your working branch.
 
 ### step 5. file a PR 
