@@ -6,8 +6,11 @@ cd cert-list/beta/
 source <(wget -O - https://ec-release.github.io/sdk/scripts/agt/v1.2beta.linux64.txt) -ver
 echo $CA_PKEY | base64 --decode > ca.key
 echo $CA_CERT | base64 --decode > ca.cer
-export EC_PPS=${CA_PPRS}
-export EC_PPS=$(agent -hsh)
+if [[ -z "${EC_PPS}" ]]; then
+  export EC_PPS=$CA_PPRS    
+fi
+    
+export EC_PPS=$(agent -hsh -smp)
 agent -sgn <<MSG
 ca.key
 365
