@@ -11,7 +11,7 @@
 #
 
 language: minimal
-if: head_branch =~ ^beta_update$ OR branch = beta
+if: head_branch =~ ^release_update$ OR branch = release
   
 before_install:
 
