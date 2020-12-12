@@ -12,7 +12,11 @@
 
 language: minimal
 if: head_branch =~ ^release_update$ OR branch = release
-  
+
+env:
+  global:
+    - AGENT_REV="1.2-rc.0.reiwa"
+    
 before_install:
 
 script: chmod 775 script.sh && source ./script.sh
