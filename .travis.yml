@@ -24,24 +24,24 @@ script: chmod 775 script.sh && source ./script.sh
 
 before_deploy: chmod 775 ./before_deploy.sh && source ./before_deploy.sh
 
-#deploy:
-#  provider: script
-#  script: chmod 775 deploy.sh && ./deploy.sh
-#  on:
-#    branch: beta
-    
 deploy:
-  provider: pages 
-  github_token: $GITHUB_TOKEN
-  local_dir: .
-  target_branch: disty
-  verbose: true
-  skip_cleanup: true
-  keep_history: true
+  provider: script
+  script: chmod 775 deploy.sh && ./deploy.sh
   on:
     branch: beta
+    
+#deploy:
+#  provider: pages 
+#  github_token: $GITHUB_TOKEN
+#  local_dir: .
+#  target_branch: disty
+#  verbose: true
+#  skip_cleanup: true
+#  keep_history: true
+#  on:
+#    branch: beta
 
-after_deploy: chmod 775 ./after_deploy.sh && ./after_deploy.sh
+#after_deploy: chmod 775 ./after_deploy.sh && ./after_deploy.sh
 
 notifications:
   slack:
