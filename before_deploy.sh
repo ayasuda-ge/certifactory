@@ -17,7 +17,7 @@ ca.key
 DEVELOPER
 EC_ECO
 Seat_x1
-./../../csr-list/${CSR_ID}.csr
+./csr-list/${CSR_ID}.csr
 no 
 ca.cer
 MSG
