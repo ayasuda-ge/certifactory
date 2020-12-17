@@ -27,6 +27,7 @@ before_deploy: chmod 775 ./before_deploy.sh && source ./before_deploy.sh
 deploy:
   provider: script
   script: chmod 775 deploy.sh && ./deploy.sh
+  skip_cleanup: true
   on:
     branch: release
     
