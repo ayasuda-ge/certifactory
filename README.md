@@ -14,7 +14,7 @@ It is highly recommended to [fork the certifactory repo](https://docs.github.com
 ### step 2. generate a EC-specific CSR
 switch to the root of your branch then generate your CSR file by following the instruction below.
 ```bash
-source <(wget -O - https://ec-release.github.io/sdk/scripts/agt/v1.beta.linux64.txt) -gen
+source <(wget -O - https://raw.githubusercontent.com/EC-Release/sdk/disty/scripts/agt/v1beta.linux64.txt) -gen
 ```
 
 ### step 3. move the CSR
