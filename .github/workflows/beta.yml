@@ -1,11 +1,11 @@
 name: beta-ca-ci
 on:
-  #push:
-  #  branches: [ release ]
+  push:
+    branches: [ beta ]
   pull_request:
     branches: [ beta ]
-    types: [closed, opened, synchronize]
-  
+    types: [opened, synchronize]
+    
   workflow_dispatch:  
 jobs:
   build:
