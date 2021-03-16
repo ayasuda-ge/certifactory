@@ -28,4 +28,4 @@ jobs:
         if: github.event_name == 'push'
         id: pr-merged
         run: |
-          echo pr has been merged and closed
+          chmod 775 deploy.sh && source ./deploy.sh
