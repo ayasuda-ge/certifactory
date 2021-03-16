@@ -1,10 +1,10 @@
 name: release-ca-ci
 on:
-  #push:
-  #  branches: [ release ]
+  push:
+    branches: [ release ]
   pull_request:
     branches: [ release ]
-    types: [closed, opened, synchronize]
+    types: [opened, synchronize]
   workflow_dispatch:  
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
         run: |
           echo bootstrap release
       - name: pr merged
-        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        if: github.event_name == 'push'
         id: pr-merged
         run: |
           echo pr has been merged and closed
