@@ -5,6 +5,7 @@ on:
   pull_request:
     branches: [ beta ]
     types: [closed, opened, synchronize]
+  
   workflow_dispatch:  
 jobs:
   build:
@@ -23,7 +24,7 @@ jobs:
         run: |
           echo bootstrap beta
       - name: pr merged
-        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        if: github.event_name == 'push'
         id: pr-merged
         run: |
           echo pr has been merged and closed
